@@ -29,7 +29,7 @@ FILES_PRINTF = ft_printf.c ft_inputnode.c ft_charstr.c ft_getparams.c\
 			   ft_print.c ft_replaceflag.c ft_whichconv.c ft_putwstr.c\
 			   ft_bigs.c ft_wstrlen.c ft_wstrndup.c ft_wprec.c ft_wclen.c\
 			   ft_getwstring.c ft_getmod.c ft_input.c ft_printwidth.c\
-			   ft_dtoa.c ft_typef.c\
+			   ft_dtoa.c ft_typef.c ft_bigc.c\
 
 FILES_LIBFT = ft_strlen.c ft_strdup.c ft_strcpy.c ft_strncpy.c ft_strcat.c\
 			  ft_strncat.c ft_atoi.c ft_isalpha.c ft_isdigit.c ft_isalnum.c\

@@ -18,16 +18,16 @@ void	ft_typec(t_param *ptr, va_list ap)
 {
 	long int c;
 
-	if (!(c = va_arg(ap, long int)))
+	if (ptr->type == 'c' && ptr->conv != 5)
 	{
-		ptr->wc = '\0';
-		ptr->type = 'w';
+		if (!(c = va_arg(ap, long int)))
+		{
+			ptr->wc = '\0';
+			ptr->type = 'w';
+		}
+		else
+			ptr->string = ft_charstr((int)c);
 	}
 	else
-	{
-		if (ptr->type == 'c' && ptr->conv != 5)
-			ptr->string = ft_charstr((int)c);
-		else
-			ptr->wc = (wchar_t)c;
-	}
+		ft_bigc(ptr, ap);
 }

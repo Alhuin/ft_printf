@@ -28,6 +28,8 @@ int			ft_printf(const char *restrict format, ...)
 	ptr = begin;
 	while (ptr)
 	{
+		if (ptr->error == 1)
+			return (-1);
 		if (ptr->type != 'n')
 			ret = ft_print(ptr, ret);
 		ptr = ptr->next;
