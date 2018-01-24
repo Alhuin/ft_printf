@@ -6,7 +6,7 @@
 /*   By: jjanin-r <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/12/12 17:12:36 by jjanin-r     #+#   ##    ##    #+#       */
-/*   Updated: 2018/01/24 07:06:44 by jjanin-r    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/01/24 09:01:38 by jjanin-r    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -96,5 +96,7 @@ void				ft_input(t_param **begin, char **str, int i);
 void				ft_compute1(t_param *ptr);
 void				ft_flag01(t_param *ptr, int neg, int esp);
 char				*ft_printwidth(t_param *ptr, char c);
+char				*ft_dtoa(double nbr, int prec);
+void				ft_typef(t_param *ptr, va_list ap);
 
 #endif

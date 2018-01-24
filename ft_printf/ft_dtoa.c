@@ -1,39 +1,36 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_getflags.c                                    .::    .:/ .      .::   */
+/*   ft_dtoa.c                                        .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: jjanin-r <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2017/12/21 21:44:51 by jjanin-r     #+#   ##    ##    #+#       */
-/*   Updated: 2018/01/24 08:51:17 by jjanin-r    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/01/24 08:34:48 by jjanin-r     #+#   ##    ##    #+#       */
+/*   Updated: 2018/01/24 09:08:09 by jjanin-r    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
-#include <stdio.h>
 
-void		ft_getflags(char **str, t_param **begin)
+char	*ft_dtoa(double nbr, int prec)
 {
-	t_param *ptr;
+	char			*ret;
+	long long int	nb;
+	float			dec;
 
-	ptr = *begin;
-	while (ptr->next)
-		ptr = ptr->next;
-	while (**str == '+' || **str == '-' || **str == ' '
-			|| **str == '#' || **str == '0')
+	nb = nbr / 1;
+	if ((dec = nbr - nb) < 0)
+		dec = -dec;
+	while (prec-- > 0)
+		dec *= 10;
+	dec /= 1;
+	if (prec == 0)
+		ret = ft_itoa(nb);
+	else
 	{
-		if (**str == '#')
-			ft_putflag(**str, ptr);
-		else if (**str == '0')
-			ft_putflag(**str, ptr);
-		else if (**str == ' ')
-			ft_putflag(**str, ptr);
-		else if (**str == '+')
-			ft_putflag(**str, ptr);
-		else if (**str == '-')
-			ft_putflag(**str, ptr);
-		*str += 1;
+		ret = ft_strjoinfree(ft_longitoa(nb), ".", 1);
+		ret = ft_strjoinfree(ret, ft_longitoa(dec), 3);
 	}
+	return (ret);
 }

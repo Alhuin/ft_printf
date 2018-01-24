@@ -6,7 +6,7 @@
 /*   By: jjanin-r <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/12/20 20:55:54 by jjanin-r     #+#   ##    ##    #+#       */
-/*   Updated: 2018/01/24 04:28:48 by jjanin-r    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/01/24 08:56:36 by jjanin-r    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -17,7 +17,8 @@ static int		ft_validtype(char c)
 {
 	if (c == 's' || c == 'S' || c == 'p' || c == 'd' || c == 'D' ||
 			c == 'i' || c == 'o' || c == 'O' || c == 'u' || c == 'U' ||
-			c == 'x' || c == 'X' || c == 'C' || c == 'c' || c == '%')
+			c == 'x' || c == 'X' || c == 'C' || c == 'c' || c == '%' ||
+			c == 'f' || c == 'F')
 		return (1);
 	else
 		return (0);
@@ -42,6 +43,8 @@ static void		ft_gotype(t_param *ptr, char **str, va_list ap)
 		ft_typex(str, ptr, ap);
 	else if (**str == 'd' || **str == 'i' || **str == 'D')
 		ft_typed(ptr, ap);
+	else if (**str == 'f' || **str == 'F')
+		ft_typef(ptr, ap);
 	*str += 1;
 }
 

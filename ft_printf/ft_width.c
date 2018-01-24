@@ -6,13 +6,12 @@
 /*   By: jjanin-r <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/01/11 16:41:24 by jjanin-r     #+#   ##    ##    #+#       */
-/*   Updated: 2018/01/24 02:12:02 by jjanin-r    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/01/24 08:17:03 by jjanin-r    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
-#include <stdio.h>
 
 void		ft_width(t_param *ptr)
 {
