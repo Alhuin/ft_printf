@@ -15,8 +15,6 @@
 
 static int			ft_printbigc(t_param *ptr, int ret)
 {
-	if (ptr->error == 1)
-		return (-1);
 	if (ft_findflag(ptr, '-') != -1)
 		ret += ft_putwchar(ptr->wc);
 	while (ptr->width-- > ft_wclen(ptr->wc))
@@ -34,8 +32,6 @@ static int			ft_printbigc(t_param *ptr, int ret)
 
 static int			ft_printw(t_param *ptr, int ret)
 {
-	if (ptr->error == 1)
-		return (-1);
 	if (ft_findflag(ptr, '-') != -1)
 		ret += ft_putwchar('\0');
 	while (ptr->width-- > 1)
@@ -53,8 +49,6 @@ static int			ft_printw(t_param *ptr, int ret)
 
 static int			ft_printbigs(t_param *ptr, int ret)
 {
-	if (ptr->error == 1)
-		return (-1);
 	if (ft_findflag(ptr, '-') != -1)
 		ret += ft_putwstr(ptr->wstring);
 	while (ptr->width-- > ft_wstrlen(ptr->wstring))
@@ -76,10 +70,8 @@ int					ft_print(t_param *ptr, int ret)
 				ptr->conv == 5) && ptr->type != 'S' && (!(ptr->type == 's' &&
 						ptr->conv == 5)))
 	{
-		if (ptr->error == 1)
-			return (-1);
-		write(1, ptr->string, ptr->size);
-		ret += ptr->size;
+			write(1, ptr->string, ptr->size);
+			ret += ptr->size;
 	}
 	else
 	{

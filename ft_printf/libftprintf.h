@@ -35,6 +35,7 @@ typedef struct		s_param
 	wchar_t			wc;
 	int				*ptr;
 	int				error;
+	int				input;
 	struct s_param	*next;
 }					t_param;
 

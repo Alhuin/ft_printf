@@ -33,6 +33,7 @@ t_param	*ft_node(void)
 	new->type = 'a';
 	new->ptr = NULL;
 	new->error = 0;
+	new->input = 0;
 	new->next = NULL;
 	return (new);
 }

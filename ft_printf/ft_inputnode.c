@@ -33,6 +33,7 @@ t_param		*ft_inputnode(char **str)
 	new->type = 's';
 	new->ptr = NULL;
 	new->error = 0;
+	new->input = 1;
 	new->next = NULL;
 	ft_strdel(str);
 	return (new);

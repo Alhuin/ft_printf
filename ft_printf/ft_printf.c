@@ -28,10 +28,12 @@ int			ft_printf(const char *restrict format, ...)
 	ptr = begin;
 	while (ptr)
 	{
-		if (ptr->error == 1)
+		if (ptr->error == 1 || (ptr->input == 1 && ptr->next
+			&& ptr->next->error == 1))
 			return (-1);
 		if (ptr->type != 'n')
-			ret = ft_print(ptr, ret);
+			if ((ret = ft_print(ptr, ret)) == -1)
+				return (-1);
 		ptr = ptr->next;
 	}
 	ft_lsdel(&begin);
