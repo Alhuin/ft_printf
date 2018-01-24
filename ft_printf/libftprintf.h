@@ -33,6 +33,7 @@ typedef struct		s_param
 	char			*string;
 	wchar_t			*wstring;
 	wchar_t			wc;
+	int				*ptr;
 	int				error;
 	struct s_param	*next;
 }					t_param;

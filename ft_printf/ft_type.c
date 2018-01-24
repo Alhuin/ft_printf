@@ -18,7 +18,7 @@ static int		ft_validtype(char c)
 	if (c == 's' || c == 'S' || c == 'p' || c == 'd' || c == 'D' ||
 			c == 'i' || c == 'o' || c == 'O' || c == 'u' || c == 'U' ||
 			c == 'x' || c == 'X' || c == 'C' || c == 'c' || c == '%' ||
-			c == 'f' || c == 'F')
+			c == 'f' || c == 'F' || c == 'n')
 		return (1);
 	else
 		return (0);
@@ -45,6 +45,8 @@ static void		ft_gotype(t_param *ptr, char **str, va_list ap)
 		ft_typed(ptr, ap);
 	else if (**str == 'f' || **str == 'F')
 		ft_typef(ptr, ap);
+	else if (**str == 'n')
+		ptr->ptr = va_arg(ap, int *);
 	*str += 1;
 }
 

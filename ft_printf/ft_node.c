@@ -31,6 +31,7 @@ t_param	*ft_node(void)
 	new->wstring = NULL;
 	new->wc = 0;
 	new->type = 'a';
+	new->ptr = NULL;
 	new->error = 0;
 	new->next = NULL;
 	return (new);

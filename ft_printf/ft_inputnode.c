@@ -31,6 +31,7 @@ t_param		*ft_inputnode(char **str)
 	new->wstring = NULL;
 	new->wc = 0;
 	new->type = 's';
+	new->ptr = NULL;
 	new->error = 0;
 	new->next = NULL;
 	ft_strdel(str);

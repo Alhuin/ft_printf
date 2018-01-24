@@ -28,7 +28,8 @@ int			ft_printf(const char *restrict format, ...)
 	ptr = begin;
 	while (ptr)
 	{
-		ret = ft_print(ptr, ret);
+		if (ptr->type != 'n')
+			ret = ft_print(ptr, ret);
 		ptr = ptr->next;
 	}
 	ft_lsdel(&begin);

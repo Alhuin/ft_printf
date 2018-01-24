@@ -16,10 +16,17 @@
 void	ft_compute(t_param **begin)
 {
 	t_param	*ptr;
+	int size;
 
+	size = 0;
 	ptr = *begin;
 	while (ptr->next)
+	{
+		size += ptr->size;
 		ptr = ptr->next;
+	}
+	if (ptr->type == 'n')
+		*(ptr->ptr) = size;
 	if (ptr->type == 's' && ptr->conv != 5 && ptr->prec != 0)
 	{
 		ptr->string = ft_precstr(ptr);
