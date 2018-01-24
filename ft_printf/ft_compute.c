@@ -6,7 +6,7 @@
 /*   By: jjanin-r <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/12/22 18:49:05 by jjanin-r     #+#   ##    ##    #+#       */
-/*   Updated: 2018/01/24 03:24:54 by jjanin-r    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/01/24 08:18:55 by jjanin-r    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -51,7 +51,10 @@ void	ft_compute1(t_param *ptr)
 			ptr->type != 'c' && ptr->type != 's' && ptr->type != 'p' &&
 			ptr->type != 'o' && ptr->type != 'x' && ptr->type != 'X')
 		if ((ft_atoi(ptr->string) >= 0) && ptr->type != '%')
+		{
 			ptr->string = ft_strjoinfree(" ", ptr->string, 2);
+			ft_eraseflag(ptr, ' ');
+		}
 	if (ptr->width >= (int)ft_strlen(ptr->string) && ptr->type != 'S')
 		ft_width(ptr);
 	if (ptr->type == 'p')
