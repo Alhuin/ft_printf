@@ -19,4 +19,5 @@ void	ft_input(t_param **begin, char **str, int i)
 
 	tmp = ft_strsub(*str, 0, i);
 	ft_lstpush(begin, ft_inputnode(&tmp));
+	*str = *str + i;
 }

@@ -31,7 +31,7 @@ int		ft_wstrlen(wchar_t *s)
 			else if (s[i] <= 65535)
 				j += 3;
 			else if (s[i] <= 1114111)
-				j += 3;
+				j += 4;
 			i++;
 		}
 	}

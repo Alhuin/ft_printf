@@ -30,10 +30,12 @@ int			ft_printf(const char *restrict format, ...)
 	{
 		if (ptr->error == 1 || (ptr->input == 1 && ptr->next
 			&& ptr->next->error == 1))
-			return (-1);
-		if (ptr->type != 'n')
-			if ((ret = ft_print(ptr, ret)) == -1)
+			{
+				ft_lsdel(&begin);
 				return (-1);
+			}
+		if (ptr->type != 'n')
+			ret = ft_print(ptr, ret);
 		ptr = ptr->next;
 	}
 	ft_lsdel(&begin);

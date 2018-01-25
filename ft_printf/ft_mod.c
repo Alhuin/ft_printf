@@ -24,12 +24,16 @@ void		ft_mod(t_param **begin, char **str, va_list ap, int i)
 		if ((*str)[i] == '%')
 		{
 			if (i != 0)
-			{
 				ft_input(begin, str, i);
-				*str = *str + i;
-			}
 			else
+			{
+				if (ft_checkerror(begin))
+				{
+					*str = str_pointer;
+					return ;
+				}
 				ft_getmod(begin, str, ap);
+			}
 			i = -1;
 		}
 		i++;
