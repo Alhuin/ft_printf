@@ -17,7 +17,8 @@ int			ft_validtype(char c)
 {
 	if (c == 's' || c == 'S' || c == 'p' || c == 'd' || c == 'D' || c == 'i' ||
 			c == 'o' || c == 'O' || c == 'u' || c == 'U' || c == 'x' ||
-			c == 'X' || c == 'C' || c == 'c' || c == '%')
+			c == 'X' || c == 'C' || c == 'c' || c == '%' || c == 'n' ||
+			c == 'b' || c == 'f' || c == 'F')
 		return (1);
 	else
 		return (0);

@@ -29,7 +29,7 @@ static char		*ft_strreplace(int f, char *dst, char *src, int start, int end)
 
 	j = 0;
 	i = ft_strlen(dst) - (end - start) + ft_strlen(src);
-	ret = malloc(sizeof(char) + i + 2);
+	ret = malloc(sizeof(char) * i + 2);
 	i = 0;
 	while (i < start)
 	{
@@ -46,6 +46,25 @@ static char		*ft_strreplace(int f, char *dst, char *src, int start, int end)
 	if (f == 2 || f == 3)
 		ft_strdel(&src);
 	return (ret);
+}
+
+int		ft_colorlen(char *str)
+{
+	int i;
+	int j;
+
+	j = 0;
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] == '{')
+		{
+			if (ft_checkcolor(str + i) != NULL)
+				j++;
+		}
+	i++;
+	}
+	return (j * 8);
 }
 
 char	*ft_color(char *str)

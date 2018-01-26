@@ -13,16 +13,20 @@
 
 #include "libftprintf.h"
 
-void	ft_getparams(const char *restrict format, t_param **begin, va_list ap)
+int		ft_getparams(const char *restrict format, t_param **begin, va_list ap)
 {
 	int		i;
 	char	*str;
+	int		clen;
 
 	i = 0;
-	str = ft_color(ft_strdup(format));
+	str = ft_strdup(format);
+	clen = ft_colorlen(str);
+	str = ft_color(str);
 	if ((ft_strchr(str, '%')) == NULL)
 		ft_lstpush(begin, ft_inputnode(&str));
 	else
 		ft_mod(begin, &str, ap, 0);
 	ft_strdel(&str);
+	return (clen);
 }

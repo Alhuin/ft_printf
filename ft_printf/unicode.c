@@ -62,7 +62,7 @@ void		ft_bigs(t_param *ptr, va_list ap)
 	{
 		while (ptr->wstring[i] != '\0')
 		{
-			if (MB_CUR_MAX == 1 && ptr->wstring[i] > 127 && ptr->wstring[i] < 256)
+			if (MB_CUR_MAX == 1 && ptr->wstring[i] < 256)
 				ptr->wstring[i] = (char)ptr->wstring[i];
 			i++;
 		}

@@ -18,13 +18,14 @@ int			ft_printf(const char *restrict format, ...)
 {
 	va_list		ap;
 	int			ret;
+	int			clen;
 	t_param		*ptr;
 	t_param		*begin;
 
 	begin = NULL;
 	ret = 0;
 	va_start(ap, format);
-	ft_getparams(format, &begin, ap);
+	clen = ft_getparams(format, &begin, ap);
 	ptr = begin;
 	while (ptr)
 	{
@@ -39,5 +40,5 @@ int			ft_printf(const char *restrict format, ...)
 		ptr = ptr->next;
 	}
 	ft_lsdel(&begin);
-	return (ret);
+	return (ret -= clen);
 }

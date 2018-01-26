@@ -17,7 +17,7 @@ char		*ft_strjoinfree(char *s1, char *s2, int i)
 {
 	char *str;
 
-	if (!(str = malloc(ft_strlen(s1) + ft_strlen(s2) + 1)))
+	if (!(str = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1)))
 		return (NULL);
 	str = ft_strcpy(str, s1);
 	str = ft_strcat(str, s2);

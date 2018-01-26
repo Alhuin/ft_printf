@@ -30,7 +30,8 @@ char	*ft_printwidth(t_param *ptr, char c)
 		i = ptr->width - ft_wstrlen(ptr->wstring);
 	if (i > 0)
 	{
-		str = (char *)malloc(sizeof(char) * i + 1);
+		if (!(str = (char *)malloc(sizeof(char) * i + 1)))
+			return (NULL);
 		if (ft_findflag(ptr, '0') != -1 || ft_findflag(ptr, 'O') != -1)
 			while (str[j])
 				str[j++] = '0';

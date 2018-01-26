@@ -48,7 +48,7 @@ t_param				**ft_lstpush(t_param **begin, t_param *new);
 t_param				*ft_inputnode(char **str);
 char				*ft_longitoa_base(long long value, int base);
 int					ft_printf(const char *restrict format, ...);
-void				ft_getparams(const char *restrict format,
+int					ft_getparams(const char *restrict format,
 					t_param **begin, va_list ap);
 t_param				*ft_node(void);
 void				ft_compute(t_param **begin);
@@ -103,5 +103,6 @@ void				ft_typef(t_param *ptr, va_list ap);
 void				ft_bigc(t_param *ptr, va_list ap);
 int					ft_checkerror(t_param **begin);
 char				*ft_color(char *str);
+int					ft_colorlen(char *str);
 
 #endif

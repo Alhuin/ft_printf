@@ -21,7 +21,8 @@ char		*ft_precstr(t_param *ptr)
 	i = 0;
 	if (ptr->prec == -1)
 		ptr->prec = 0;
-	ret = malloc(sizeof(char) * (ptr->prec + 1));
+	if (!(ret = (char *)malloc(sizeof(char) * (ptr->prec + 1))))
+		return (NULL);
 	ret[ptr->prec] = '\0';
 	while (ptr->prec-- > 0)
 	{
