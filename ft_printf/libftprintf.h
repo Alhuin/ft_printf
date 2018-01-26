@@ -102,5 +102,6 @@ char				*ft_dtoa(double nbr, int prec);
 void				ft_typef(t_param *ptr, va_list ap);
 void				ft_bigc(t_param *ptr, va_list ap);
 int					ft_checkerror(t_param **begin);
+char				*ft_color(char *str);
 
 #endif

@@ -19,7 +19,7 @@ void	ft_getparams(const char *restrict format, t_param **begin, va_list ap)
 	char	*str;
 
 	i = 0;
-	str = ft_strdup(format);
+	str = ft_color(ft_strdup(format));
 	if ((ft_strchr(str, '%')) == NULL)
 		ft_lstpush(begin, ft_inputnode(&str));
 	else
