@@ -6,7 +6,7 @@
 /*   By: jjanin-r <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/12/20 16:35:03 by jjanin-r     #+#   ##    ##    #+#       */
-/*   Updated: 2018/01/24 01:21:44 by jjanin-r    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/01/29 21:57:28 by jjanin-r    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -17,7 +17,8 @@ t_param		*ft_inputnode(char **str)
 {
 	t_param *new;
 
-	new = (t_param *)malloc(sizeof(*new));
+	if (!(new = (t_param *)malloc(sizeof(*new))))
+		return (NULL);
 	new->flag = 'a';
 	new->flag1 = 'a';
 	new->flag2 = 'a';

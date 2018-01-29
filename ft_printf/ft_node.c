@@ -6,7 +6,7 @@
 /*   By: jjanin-r <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/12/22 17:56:08 by jjanin-r     #+#   ##    ##    #+#       */
-/*   Updated: 2018/01/19 18:15:00 by jjanin-r    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/01/29 22:05:57 by jjanin-r    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -17,7 +17,8 @@ t_param	*ft_node(void)
 {
 	t_param *new;
 
-	new = (t_param *)malloc(sizeof(*new));
+	if (!(new = (t_param *)malloc(sizeof(*new))))
+		return (NULL);
 	new->flag = 'a';
 	new->flag1 = 'a';
 	new->flag2 = 'a';

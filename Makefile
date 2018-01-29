@@ -6,7 +6,7 @@
 #    By: jjanin-r <marvin@le-101.fr>                +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2017/12/21 18:36:09 by jjanin-r     #+#   ##    ##    #+#        #
-#    Updated: 2018/01/24 09:01:49 by jjanin-r    ###    #+. /#+    ###.fr      #
+#    Updated: 2018/01/29 19:03:01 by jjanin-r    ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -25,7 +25,7 @@ FILES_PRINTF = ft_printf.c ft_inputnode.c ft_charstr.c ft_getparams.c\
 			   ft_width.c ft_isflag.c ft_eraseflag.c ft_flag0.c ft_flagdiese.c\
 			   ft_strjoinfree.c ft_prec.c ft_precstr.c ft_ulongitoa_base.c\
 			   ft_typed.c ft_ulongitoa.c ft_typeu.c ft_typec.c ft_u.c\
-			   ft_bigu.c ft_lsdel.c ft_putwchar.c ft_error.c ft_lsdelone.c\
+			   ft_bigu.c ft_lsdel.c ft_putwchar.c ft_lsdelone.c\
 			   ft_print.c ft_replaceflag.c ft_whichconv.c ft_putwstr.c\
 			   ft_wstrlen.c ft_wstrndup.c ft_wprec.c ft_wclen.c\
 			   ft_getmod.c ft_input.c ft_printwidth.c\

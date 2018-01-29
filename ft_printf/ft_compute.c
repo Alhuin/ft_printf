@@ -6,7 +6,7 @@
 /*   By: jjanin-r <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/12/22 18:49:05 by jjanin-r     #+#   ##    ##    #+#       */
-/*   Updated: 2018/01/24 08:17:52 by jjanin-r    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/01/29 14:03:30 by jjanin-r    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -16,7 +16,7 @@
 void	ft_compute(t_param **begin)
 {
 	t_param	*ptr;
-	int size;
+	int		size;
 
 	size = 0;
 	ptr = *begin;

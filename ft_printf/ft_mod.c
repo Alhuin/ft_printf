@@ -6,7 +6,7 @@
 /*   By: jjanin-r <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/12/20 20:02:29 by jjanin-r     #+#   ##    ##    #+#       */
-/*   Updated: 2018/01/24 03:20:13 by jjanin-r    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/01/29 22:18:28 by jjanin-r    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -24,7 +24,7 @@ void		ft_mod(t_param **begin, char **str, va_list ap, int i)
 		if ((*str)[i] == '%')
 		{
 			if (i != 0)
-				ft_input(begin, str, i);
+				ft_input(begin, str, i, str_pointer);
 			else
 			{
 				if (ft_checkerror(begin))
@@ -32,13 +32,13 @@ void		ft_mod(t_param **begin, char **str, va_list ap, int i)
 					*str = str_pointer;
 					return ;
 				}
-				ft_getmod(begin, str, ap);
+				ft_getmod(begin, str, ap, str_pointer);
 			}
 			i = -1;
 		}
 		i++;
 	}
 	if (i != 0)
-		ft_input(begin, str, i);
+		ft_input(begin, str, i, str_pointer);
 	*str = str_pointer;
 }

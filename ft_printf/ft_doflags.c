@@ -6,7 +6,7 @@
 /*   By: jjanin-r <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/01/11 22:01:20 by jjanin-r     #+#   ##    ##    #+#       */
-/*   Updated: 2018/01/24 02:03:37 by jjanin-r    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/01/29 13:59:55 by jjanin-r    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -36,7 +36,6 @@ void		ft_doflags2(t_param *ptr, int i)
 	if (ft_findflag(ptr, '-') != -1 && ptr->type != 'w' && ptr->type != 'C' &&
 	!(ptr->type == 'c' && ptr->conv == 5) && ptr->type != 'S' &&
 	!(ptr->type == 's' && ptr->conv == 5))
-
 	{
 		while (i-- > 0)
 			ptr->string = ft_strjoinfree(ptr->string, " ", 1);

@@ -6,14 +6,14 @@
 /*   By: jjanin-r <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/01/24 08:34:48 by jjanin-r     #+#   ##    ##    #+#       */
-/*   Updated: 2018/01/24 09:34:11 by jjanin-r    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/01/29 14:21:07 by jjanin-r    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-static void			ft_checklocale(wchar_t wc, t_param *ptr, int i)
+static void		ft_checklocale(wchar_t wc, t_param *ptr, int i)
 {
 	if (MB_CUR_MAX == 1)
 	{
@@ -48,7 +48,7 @@ void			ft_bigc(t_param *ptr, va_list ap)
 	ft_checklocale(ptr->wc, ptr, -1);
 }
 
-void		ft_bigs(t_param *ptr, va_list ap)
+void			ft_bigs(t_param *ptr, va_list ap)
 {
 	int i;
 

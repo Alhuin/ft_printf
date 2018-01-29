@@ -6,7 +6,7 @@
 /*   By: jjanin-r <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/12/12 17:12:36 by jjanin-r     #+#   ##    ##    #+#       */
-/*   Updated: 2018/01/24 09:01:38 by jjanin-r    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/01/29 22:20:02 by jjanin-r    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -93,8 +93,9 @@ void				ft_wprec(t_param *ptr);
 int					ft_wclen(wchar_t wc);
 void				ft_getwstring(t_param *ptr);
 void				ft_doflags2(t_param *ptr, int i);
-void				ft_getmod(t_param **begin, char **str, va_list ap);
-void				ft_input(t_param **begin, char **str, int i);
+void				ft_getmod(t_param **begin, char **str, va_list ap,
+					char *ptr);
+void				ft_input(t_param **begin, char **str, int i, char *ptr);
 void				ft_compute1(t_param *ptr);
 void				ft_flag01(t_param *ptr, int neg, int esp);
 char				*ft_printwidth(t_param *ptr, char c);
@@ -104,5 +105,6 @@ void				ft_bigc(t_param *ptr, va_list ap);
 int					ft_checkerror(t_param **begin);
 char				*ft_color(char *str);
 int					ft_colorlen(char *str);
+void				ft_nomod(t_param **begin, char **str, int i, char *ptr);
 
 #endif

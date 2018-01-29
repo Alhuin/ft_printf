@@ -6,7 +6,7 @@
 /*   By: jjanin-r <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/01/15 17:13:57 by jjanin-r     #+#   ##    ##    #+#       */
-/*   Updated: 2018/01/24 07:21:23 by jjanin-r    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/01/29 14:04:24 by jjanin-r    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -70,8 +70,8 @@ int					ft_print(t_param *ptr, int ret)
 				ptr->conv == 5) && ptr->type != 'S' && (!(ptr->type == 's' &&
 						ptr->conv == 5)))
 	{
-			write(1, ptr->string, ptr->size);
-			ret += ptr->size;
+		write(1, ptr->string, ptr->size);
+		ret += ptr->size;
 	}
 	else
 	{

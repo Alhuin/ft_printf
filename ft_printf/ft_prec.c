@@ -6,7 +6,7 @@
 /*   By: jjanin-r <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/01/12 14:42:25 by jjanin-r     #+#   ##    ##    #+#       */
-/*   Updated: 2018/01/24 04:34:42 by jjanin-r    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/01/29 21:46:25 by jjanin-r    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -23,6 +23,7 @@ static void		ft_widthplus(t_param *ptr)
 			{
 				ptr->string = ft_strjoinfree("+", ptr->string, 2);
 				ft_eraseflag(ptr, '+');
+				ft_eraseflag(ptr, ' ');
 			}
 			if (ft_findflag(ptr, ' ') != -1)
 			{
